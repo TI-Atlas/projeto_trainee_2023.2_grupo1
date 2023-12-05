@@ -1,8 +1,8 @@
 import { Entity, Column, CreateDateColumn, UpdateDateColumn, PrimaryColumn } from "typeorm";
 import { v4 as uuid } from "uuid";
 
-@Entity("Camisas")
-export class Camisas{
+@Entity("Carros")
+export class Carros{
     @PrimaryColumn()
     id: string;
 
@@ -15,8 +15,6 @@ export class Camisas{
     @Column()
     preco: number;
 
-    @Column()
-    estoque: number;
 
     @Column()
     imagem: string;

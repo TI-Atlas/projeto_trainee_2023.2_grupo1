@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
-import { CamisaService } from "../services/CamisaService";
+import { CarroService } from "../services/CarroService";
 
-export class CamisaController{
+export class CarroController{
     async handle(request: Request, response: Response){
-        const {nome, descricao, preco, estoque, imagem} = request.body;
-        const service = new CamisaService();
-        const result = await service.execute({nome, descricao, preco, estoque, imagem});
+        const {nome, descricao, preco, imagem} = request.body;
+        const service = new CarroService();
+        const result = await service.execute({nome, descricao, preco, imagem});
         if(result instanceof Error){
             return response.status(400).json(result.message);
         }

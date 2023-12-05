@@ -1,10 +1,10 @@
 import { Request, Response } from "express";
-import { DeleteCamisaService } from "../services/DeleteCamisaService";
+import { DeleteCarroService } from "../services/DeleteCarroService";
 
-export class DeleteCamisaController{
+export class DeleteCarroController{
     async handle(request: Request, response: Response){
         const { id } = request.params;       
-        const service = new DeleteCamisaService();
+        const service = new DeleteCarroService();
         const result = await service.execute(id);
 
         if(result instanceof Error){
